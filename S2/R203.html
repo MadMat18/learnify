@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S2 - R201</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <div class="center_bouton">
+          <li><a href="../S1.html">S1</a></li>
+          <li><a href="../S2.html">S2</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <h2 class="center">R203 - Services réseaux </h2>
+
+    <!-- HTML code pour les boutons de bascule -->
+   
+    <div class="boutons ">        
+        <button class="course-button" data-course="course1">DHCP</button>
+        <button class="course-button" data-course="course2">Web</button>
+        <button class="course-button" data-course="course3">DNS</button>
+        <button class="course-button" data-course="course4">SSH</button>
+        <button class="course-button" data-course="course5">FTP</button>
+    </div>
+    
+
+<!-- HTML code pour les conteneurs de cours -->
+<div id="course1" class="course-container">
+  <!-- Contenu du cours 1 -->
+  <div class="course">
+    <h2>Introduction au DHCP</h2>
+    <p>Le protocole DHCP (Dynamic Host Configuration Protocol) est un protocole de réseau qui permet aux ordinateurs et aux autres appareils d'obtenir automatiquement une adresse IP et d'autres informations réseau telles que le masque de sous-réseau, la passerelle par défaut et les serveurs DNS.</p>
+    <h2>Fonctionnement</h2>
+    <p>Lorsqu'un ordinateur se connecte à un réseau, il envoie une requête DHCP pour demander une adresse IP. Le serveur DHCP du réseau reçoit cette requête et attribue une adresse IP disponible à l'ordinateur.</p>
+    <p>En plus de l'adresse IP, le serveur DHCP peut également fournir d'autres informations de configuration, telles que le masque de sous-réseau, la passerelle par défaut et les serveurs DNS.</p>
+    <h2>Avantages</h2>
+    <p>Le DHCP permet une gestion simplifiée des adresses IP sur un réseau, en évitant les conflits d'adresses IP et en permettant une allocation dynamique des adresses IP. Il permet également une configuration automatique des paramètres réseau des ordinateurs connectés, ce qui simplifie la tâche de l'administrateur réseau.</p>
+    <h2>Inconvénients</h2>
+    <p>Le DHCP peut poser un risque pour la sécurité du réseau si des personnes malveillantes parviennent à se faire passer pour des clients DHCP légitimes et obtiennent des adresses IP valides. De plus, le DHCP nécessite une configuration correcte pour fonctionner efficacement sur le réseau.</p>
+</div>
+<div class="course">
+    
+    <h3>Processus de location d'une adresse IP via DHCP</h3>
+    <ol>
+      <li>Découverte DHCP : le client envoie une requête de diffusion (broadcast) à l'ensemble du réseau pour trouver un serveur DHCP disponible.</li>
+      <li>Offre DHCP : les serveurs DHCP répondent avec une offre qui contient une adresse IP disponible et d'autres informations de configuration.</li>
+      <li>Requête DHCP : le client accepte l'offre DHCP et envoie une demande pour obtenir l'adresse IP proposée.</li>
+      <li>Attribution DHCP : le serveur DHCP confirme l'attribution de l'adresse IP et envoie les autres informations de configuration telles que le masque de sous-réseau, la passerelle par défaut et les serveurs DNS.</li>
+    </ol>
+    <h3>Types de serveurs DHCP</h3>
+    <p>Il existe deux types de serveurs DHCP : les serveurs DHCP "standalone" et les serveurs DHCP "relay". Les serveurs DHCP standalone sont directement connectés au réseau et peuvent répondre aux demandes DHCP directement. Les serveurs DHCP relay sont utilisés lorsque les clients DHCP se trouvent sur un réseau différent de celui où se trouve le serveur DHCP. Le serveur DHCP relay agit comme un intermédiaire en relayant les requêtes DHCP du client vers le serveur DHCP et en renvoyant la réponse du serveur DHCP vers le client.</p>
+    <p>Le protocole DHCP est largement utilisé dans les réseaux locaux (LAN) pour automatiser la configuration des adresses IP. Il offre un moyen facile et efficace de gérer les adresses IP dans un réseau de grande envergure.</p>
+    </div>
+</div>
+<div id="course2" class="course-container">
+  <!-- Contenu du cours 2 -->
+  <div class="course">
+    <h2>Les serveurs web et le protocole HTTP en réseau</h2>
+    <p>Un serveur web est un programme informatique qui permet de stocker et de distribuer des pages web. Ces pages sont généralement écrites en langage HTML, CSS et JavaScript. Lorsqu'un utilisateur demande une page web à un serveur web, celui-ci répond en envoyant la page demandée à l'utilisateur via le protocole HTTP (HyperText Transfer Protocol).</p>
+    <p>Le protocole HTTP est un protocole de communication client-serveur qui permet d'échanger des données sur le Web. Il permet de transmettre des fichiers multimédias tels que des images, des vidéos, des fichiers audio, etc. Le protocole HTTP est basé sur une architecture client-serveur. Le client est généralement un navigateur web et le serveur est le programme qui stocke et distribue les pages web.</p>
+    <h3>Le fonctionnement d'un serveur web</h3>
+    <p>Le fonctionnement d'un serveur web est basé sur une architecture client-serveur. Lorsqu'un utilisateur demande une page web, le navigateur envoie une requête au serveur web. Le serveur web reçoit cette requête, recherche la page demandée et renvoie la page au navigateur en utilisant le protocole HTTP. Le navigateur reçoit la page et l'affiche à l'utilisateur.</p>
+    <p>Le serveur web utilise généralement un système d'exploitation tel que Linux ou Windows. Il utilise également des logiciels tels que Apache, Nginx ou IIS pour stocker et distribuer les pages web. Ces logiciels sont des serveurs web populaires qui sont utilisés par de nombreuses entreprises et organisations dans le monde entier.</p>
+    <h3>Le protocole HTTP</h3>
+    <p>Le protocole HTTP est un protocole de communication client-serveur. Le client envoie une requête au serveur en utilisant le protocole HTTP et le serveur renvoie une réponse. Les requêtes et les réponses HTTP sont composées de messages.</p>
+    <p>Le message HTTP est constitué de deux parties : l'en-tête (header) et le corps (body). L'en-tête contient des informations sur la requête ou la réponse, telles que le type de contenu, la taille du fichier, etc. Le corps contient les données réelles envoyées dans la requête ou la réponse. Par exemple, le corps peut contenir une page web, une image, un fichier audio, etc.</p>
+    <p>Le protocole HTTP est un protocole sans état, ce qui signifie que le serveur web ne garde pas de mémoire des requêtes précédentes. Chaque requête est traitée de manière indépendante, sans aucune connaissance des requêtes précédentes. Pour les applications Web qui nécessitent des informations de session, les développeurs utilisent généralement des cookies ou des sessions pour stocker ces informations.</p>
+  </div>
+</div>
+<div id="course3" class="course-container">
+    <!-- Contenu du cours 1 -->
+    <div class="course">
+        <h1>Le protocole DNS en réseau</h1>
+        <p>Le DNS (Domain Name System) est un protocole réseau permettant de convertir un nom de domaine en adresse IP. Il permet ainsi de simplifier l'accès à des ressources réseau en utilisant des noms de domaines plus facilement mémorisables que des adresses IP.</p>
+        <h2>Fonctionnement du DNS</h2>
+        <p>Le DNS est organisé en une hiérarchie de serveurs. Les requêtes DNS sont envoyées à un serveur DNS local, qui consulte les serveurs DNS racines pour obtenir la réponse. Les serveurs DNS racines renvoient alors le nom et l'adresse IP du serveur DNS du domaine correspondant. Le serveur DNS local peut ensuite contacter directement le serveur DNS du domaine pour obtenir l'adresse IP correspondant au nom de domaine recherché.</p>
+        <h2>Types d'enregistrements DNS</h2>
+        <p>Il existe différents types d'enregistrements DNS pour spécifier la correspondance entre un nom de domaine et une adresse IP. Les plus courants sont :</p>
+        <ul>
+          <li>A : permet de spécifier l'adresse IP d'un hôte</li>
+          <li>CNAME : permet de créer un alias pour un nom de domaine</li>
+          <li>MX : permet de spécifier le serveur de messagerie pour un domaine</li>
+          <li>NS : permet de spécifier le serveur DNS pour un domaine</li>
+        </ul>
+        <h2>Sécurité du DNS</h2>
+        <p>Le DNS est un protocole sensible aux attaques car il permet à un attaquant de rediriger le trafic vers un serveur malveillant. Pour se protéger contre ces attaques, il est recommandé d'utiliser DNSSEC (DNS Security Extensions), qui permet de garantir l'authenticité et l'intégrité des réponses DNS.</p>
+      </div>
+</div>
+
+    <div id="course4" class="course-container">
+        <!-- Contenu du cours 1 -->
+    </div>
+    <div id="course5" class="course-container">
+            <!-- Contenu du cours 1 -->
+    </div>
+
+<!-- JavaScript code pour basculer entre les cours -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Masquer tous les conteneurs de cours sauf le premier
+    $(".course-container:not(:first)").hide();
+    
+    // Ajouter un gestionnaire d'événement pour les boutons de cours
+    $(".course-button").click(function() {
+      // Récupérer l'identifiant de cours associé à ce bouton
+      var course = $(this).data("course");
+      
+      // Masquer tous les conteneurs de cours
+      $(".course-container").hide();
+      
+      // Afficher le conteneur de cours associé à ce bouton
+      $("#" + course).show();
+    });
+  });
+</script>
+
+    
+    
+
+   
+
+    <footer>
+      <p>Copyright © 2022</p>
+    </footer>
+  </body>
+</html>
