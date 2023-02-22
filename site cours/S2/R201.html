@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S2 - R201</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <div class="center_bouton">
+          <li><a href="../S1.html">S1</a></li>
+          <li><a href="../S2.html">S2</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <h2 class="center">R201 - Internet </h2>
+
+    <!-- HTML code pour les boutons de bascule -->
+   
+    <div class="boutons ">        
+        <button class="course-button" data-course="course1">Adressage IP</button>
+        <button class="course-button" data-course="course2">Protocoles de routage</button>
+    </div>
+    
+
+<!-- HTML code pour les conteneurs de cours -->
+<div id="course1" class="course-container">
+  <!-- Contenu du cours 1 -->
+  <div class="course">
+    <h2>Adressage IP en réseau</h2>
+    <p>L'adressage IP est un système qui permet d'identifier de manière unique chaque nœud d'un réseau informatique. L'adresse IP est un numéro binaire de 32 bits pour IPv4 ou 128 bits pour IPv6, qui est divisé en deux parties principales : l'adresse réseau et l'adresse hôte.</p>
+    <p>L'adresse réseau identifie le réseau sur lequel se trouve l'appareil, tandis que l'adresse hôte identifie l'appareil spécifique sur ce réseau. Le masque de sous-réseau est utilisé pour séparer l'adresse IP en ces deux parties.</p>
+    <p>Le masque de sous-réseau est un nombre binaire de 32 bits pour IPv4 ou 128 bits pour IPv6, qui est utilisé pour identifier les bits de l'adresse IP qui correspondent à l'adresse réseau et ceux qui correspondent à l'adresse hôte. Les bits qui correspondent à l'adresse réseau sont définis comme "1" dans le masque de sous-réseau, tandis que les bits qui correspondent à l'adresse hôte sont définis comme "0".</p>
+    <p>Par exemple, si l'adresse IP est 192.168.1.10 avec un masque de sous-réseau de 255.255.255.0, les 24 premiers bits (ou les trois premiers octets) correspondent à l'adresse réseau et les 8 derniers bits correspondent à l'adresse hôte. Cela signifie que le réseau est 192.168.1.0, avec une plage d'adresses possibles pour les hôtes de 192.168.1.1 à 192.168.1.254.</p>
+    <p>Les adresses IP sont généralement attribuées par un serveur DHCP (Dynamic Host Configuration Protocol), qui est un service qui attribue des adresses IP aux appareils du réseau automatiquement. Les adresses IP peuvent également être configurées manuellement, ce qui est souvent le cas pour les serveurs et les appareils de réseau.</p>
+    <p>Il existe plusieurs classes d'adresses IP pour IPv4, allant de la classe A à la classe E, avec différentes plages d'adresses possibles pour chaque classe. Les classes B, C et D sont les plus couramment utilisées pour les réseaux d'entreprise et Internet.</p>
+    <p>Les adresses IPv6 sont représentées par huit groupes de chiffres hexadécimaux, séparés par des deux-points. IPv6 offre une capacité d'adressage beaucoup plus grande que IPv4, ce qui est nécessaire pour prendre en charge la croissance continue de l'Internet.</p>
+    <p>En résumé, l'adressage IP est un système complexe qui permet d'identifier de manière unique chaque nœud d'un réseau informatique. L'adresse IP est divisée en deux parties, l'adresse réseau et l'adresse hôte, avec le masque de sous-réseau utilisé pour séparer les deux parties. Les adresses IP peuvent être attribuées automatiquement ou configurées manuellement, et il existe plusieurs classes d'adresses IP pour IPv4. IPv6 offre une capacité d'adressage plus grande que IPv4, ce qui est nécessaire pour prendre en charge la croissance continue de l'Internet.
+
+</p>
+</div>
+</div>
+<div id="course2" class="course-container">
+  <!-- Contenu du cours 2 -->
+  <div class="course">
+    <h2>Les protocoles de routage</h2>
+    <p>Dans un réseau informatique, le routage est le processus de transmission de données d'un réseau à un autre via des routeurs. Les protocoles de routage sont des protocoles de communication utilisés par les routeurs pour déterminer les meilleures routes pour transmettre les paquets de données. Il existe deux types de protocoles de routage : les protocoles de routage à vecteur de distance et les protocoles de routage à état de lien.</p>
+    <h2>Protocoles de routage à vecteur de distance</h2>
+    <p>Les protocoles de routage à vecteur de distance, tels que RIP (Routing Information Protocol), IGRP (Interior Gateway Routing Protocol) et EIGRP (Enhanced Interior Gateway Routing Protocol), déterminent les meilleures routes en se basant sur la distance et la direction. Ces protocoles de routage mettent à jour les informations de routage en utilisant des messages périodiques envoyés à tous les routeurs du réseau. Chaque routeur met ensuite à jour sa table de routage en fonction des informations reçues des autres routeurs.</p>  
+    <p>Le protocole RIP utilise le nombre de sauts pour déterminer la distance entre les routeurs. Cependant, cette méthode peut entraîner des problèmes de boucles de routage et de temps de convergence, car les informations de routage sont mises à jour toutes les 30 secondes, même si rien n'a changé dans le réseau. Les protocoles de routage à vecteur de distance plus récents, comme IGRP et EIGRP, utilisent des algorithmes plus avancés pour déterminer les meilleures routes et ont une convergence plus rapide.</p>
+    <h2>Protocoles de routage à état de lien</h2>
+    <p>Les protocoles de routage à état de lien, tels que OSPF (Open Shortest Path First) et IS-IS (Intermediate System to Intermediate System), déterminent les meilleures routes en se basant sur l'état des liens entre les routeurs. Chaque routeur envoie des messages d'état de lien à tous les autres routeurs du réseau pour indiquer les liens qu'il connaît. Les autres routeurs utilisent ensuite ces informations pour construire une carte topologique du réseau et déterminer les meilleures routes.</p>
+    <p>Les protocoles de routage à état de lien sont plus précis que les protocoles de routage à vecteur de distance, car ils prennent en compte l'état réel des liens entre les routeurs. Cependant, ils nécessitent plus de bande passante pour transmettre les messages d'état de lien et plus de traitement pour construire la carte topologique.</p>
+    <h2>Conclusion</h2>
+    <p>Les protocoles de routage sont essentiels pour permettre la communication entre les réseaux. Les protocoles de routage à vecteur de distance sont simples et faciles à mettre en œuvre, mais ils peuvent entraîner des problèmes de convergence et de boucles de routage. Les protocoles de routage à état de lien sont plus précis, mais nécessitent plus de bande passante et de traitement. Les administrateurs réseau doivent choisir le protocole de routage le mieux adapté à leur réseau en fonction de ses besoins et de ses contraintes.</p>
+</div>
+</div>
+
+<!-- JavaScript code pour basculer entre les cours -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Masquer tous les conteneurs de cours sauf le premier
+    $(".course-container:not(:first)").hide();
+    
+    // Ajouter un gestionnaire d'événement pour les boutons de cours
+    $(".course-button").click(function() {
+      // Récupérer l'identifiant de cours associé à ce bouton
+      var course = $(this).data("course");
+      
+      // Masquer tous les conteneurs de cours
+      $(".course-container").hide();
+      
+      // Afficher le conteneur de cours associé à ce bouton
+      $("#" + course).show();
+    });
+  });
+</script>
+
+    
+    
+
+   
+
+    <footer>
+      <p>Copyright © 2022</p>
+    </footer>
+  </body>
+</html>
